@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,21 +17,21 @@ public class MainActivity extends AppCompatActivity {
         addListenerOnButton();
     }
     public void addListenerOnButton() {
-        loanamount = (EditText) findViewById(R.id.loan_amount);
-        interestrate = (EditText) findViewById(R.id.interest_rate);
-        loanterm = (EditText) findViewById(R.id.loan_term);
-        loanfees = (EditText) findViewById(R.id.loan_fees);
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void OnClick(View view) {
-                String value1 = loanamount.getText().toString();
-                String value2 = interestrate.getText().toString();
-                String value3 = loanterm.getText().toString();
-                String value4 = null;
-                if (loanfees.getText().toString() != null) {
-
-                }
-            }
-        });
+        loanamount = (EditText) findViewById(R.id.loanAmount);
+        interestrate = (EditText) findViewById(R.id.interestRate);
+        loanterm = (EditText) findViewById(R.id.loanTerm);
+        loanfees = (EditText) findViewById(R.id.loanFees);
+//        calculate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String value1 = loanamount.getText().toString();
+//                String value2 = interestrate.getText().toString();
+//                String value3 = loanterm.getText().toString();
+//                String value4 = null;
+//                if (loanfees.getText().toString() != null) {
+//
+//                }
+//            }
+//        });
     }
 }
