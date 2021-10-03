@@ -32,9 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 double principle = Double.parseDouble(loanAmount.getText().toString());
                 double interest = Double.parseDouble(interestRate.getText().toString()) / 100;
                 double terms = Double.parseDouble(loanTerm.getText().toString())*12;
-                double fees = Double.parseDouble(loanFees.getText().toString());
+
+                double fees = 0;
+                if (loanFees.getText().toString().isEmpty() == false)
+                    fees = Double.parseDouble(loanFees.getText().toString());
+
                 double min = 0.00;
-                min = Double.parseDouble(minPayment.getText().toString());
+
+                if(minPayment.getText().toString().isEmpty() == false)
+                    min = Double.parseDouble(minPayment.getText().toString());
+
                 double paymnt = 0;
 
                 int total = (int) (principle * (Math.pow((1 + (interest/12)), terms)) + fees);
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Toast.makeText(getApplicationContext(),
-                        "Total: $" + String.valueOf(total) + ".00\n" +"Payment: $" + String.valueOf(paymnt) +"/month for "+ (int)terms + " months",
+                        "Total: $" + String.valueOf(total) + ".00\n" +"Payment: $" + String.valueOf((int)paymnt) +"/month for "+ (int)terms + " months",
                         Toast.LENGTH_LONG).show();
 
             }

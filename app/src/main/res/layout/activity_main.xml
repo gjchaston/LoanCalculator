@@ -45,7 +45,7 @@
             android:id="@+id/minPayment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Minimum Payment::"
+            android:hint="Minimum Payment:"
             android:minHeight="48dp" />
 
         <Button
